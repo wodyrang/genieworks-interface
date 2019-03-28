@@ -13,3 +13,10 @@ spring:
         bootstrap: true
         native:
           search-locations: classpath:config/,classpath:config/eureka-server, classpath:config/product-server
+
+# Setting logging levels
+logging:
+  level:
+    com.netflix: DEBUG
+    org.springframework.web: DEBUG
+    net.genieworks.ginterface.config: DEBUG

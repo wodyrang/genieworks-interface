@@ -1,0 +1,13 @@
+server:
+  port: 28080
+
+spring:
+  profiles:
+    active: prd
+
+# Setting logging levels
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    net.genieworks.ginterface.product: INFO

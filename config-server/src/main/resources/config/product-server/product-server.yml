@@ -1,0 +1,16 @@
+server:
+  port: 28080
+
+spring:
+  profiles:
+    active: default
+  output:
+    ansi:
+      enabled: ALWAYS
+
+# Setting logging levels
+logging:
+  level:
+    com.netflix: DEBUG
+    org.springframework.web: DEBUG
+    net.genieworks.ginterface.product: DEBUG

@@ -1,0 +1,13 @@
+server:
+  port: 28080
+
+spring:
+  profiles:
+    active: dev
+
+# Setting logging levels
+logging:
+  level:
+    com.netflix: DEBUG
+    org.springframework.web: DEBUG
+    net.genieworks.ginterface.product: DEBUG

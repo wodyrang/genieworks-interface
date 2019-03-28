@@ -8,13 +8,13 @@
         <groupId>net.genieworks.ginterface</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
+    <artifactId>product-server</artifactId>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>config-server</artifactId>
-
-    <name>Genieworks Interface Configuration Server.</name>
+    <name>Genieworks Interface Product Server.</name>
     <description>
-        Genieworks interface 서버의 설정 관련 정보를 관리하는 config server.
+        Genieworks interface 서버의 상품 연동 관련 서버
     </description>
 
     <dependencyManagement>
@@ -31,21 +31,51 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
-            <version>2.1.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.genieworks.ginterface</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>net.genieworks.ginterface.config.ConfigServerApplication</start-class>
+        <start-class>net.genieworks.ginterface.config.ProductServerApplication</start-class>
         <java.version>1.8</java.version>
-        <docker.image.name>wody/genieworks-config-server</docker.image.name>
+        <docker.image.name>wody/genieworks-product-server</docker.image.name>
         <docker.image.tag>dev</docker.image.tag>
     </properties>
 

@@ -17,6 +17,8 @@
 
     <modules>
         <module>config-server</module>
+        <module>product-server</module>
+        <module>common</module>
     </modules>
 
     <build>
