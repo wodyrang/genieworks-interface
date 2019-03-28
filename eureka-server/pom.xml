@@ -8,13 +8,13 @@
         <groupId>net.genieworks.ginterface</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-    <artifactId>product-server</artifactId>
     <modelVersion>4.0.0</modelVersion>
 
-    <name>Genieworks Interface Product Server.</name>
+    <artifactId>eureka-server</artifactId>
+
+    <name>Genieworks Interface Eureka Server.</name>
     <description>
-        Genieworks interface 서버의 상품 연동 관련 서버
+        Genieworks interface 서버의 eureka server.
     </description>
 
     <dependencyManagement>
@@ -31,56 +31,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
             <version>2.1.0.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>net.genieworks.ginterface</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>net.genieworks.ginterface.config.ProductServerApplication</start-class>
+        <start-class>net.genieworks.ginterface.eureka.EurekaServerApplication</start-class>
         <java.version>1.8</java.version>
-        <docker.image.name>wody/genieworks-product-server</docker.image.name>
+        <docker.image.name>wody/genieworks-eureka-server</docker.image.name>
         <docker.image.tag>dev</docker.image.tag>
     </properties>
 
@@ -132,4 +93,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
