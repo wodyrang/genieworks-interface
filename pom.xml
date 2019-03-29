@@ -20,6 +20,10 @@
         <module>config-server</module>
         <module>product-server</module>
         <module>common</module>
+        <module>order-server</module>
+        <module>authentication-server</module>
+        <module>zuul-server</module>
+        <module>admin</module>
     </modules>
 
     <build>
