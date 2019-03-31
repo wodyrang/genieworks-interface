@@ -8,12 +8,12 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>order-server</artifactId>
+    <artifactId>g-interface.admin</artifactId>
     <modelVersion>4.0.0</modelVersion>
 
-    <name>Genieworks Interface Order Server.</name>
+    <name>Genieworks Interface Admin Server.</name>
     <description>
-        Genieworks interface 서버의 주문 연동 관련 서버
+        Genieworks interface 서버의 관리자 사이트.
     </description>
 
     <dependencyManagement>
@@ -77,9 +77,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>net.genieworks.ginterface.order.OrderServerApplication</start-class>
+        <start-class>net.genieworks.ginterface.admin.AdminApplication</start-class>
         <java.version>1.8</java.version>
-        <docker.image.name>wody/genieworks-order-server</docker.image.name>
+        <docker.image.name>wody/genieworks-product-server</docker.image.name>
         <docker.image.tag>dev</docker.image.tag>
     </properties>
 
@@ -147,4 +147,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

@@ -2,19 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <parent>
         <artifactId>genieworks-interface</artifactId>
         <groupId>net.genieworks.ginterface</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
+    <artifactId>g-interface.zuul</artifactId>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>eureka-server</artifactId>
-
-    <name>Genieworks Interface Eureka Server.</name>
+    <name>Genieworks Interface Zuul Server.</name>
     <description>
-        Genieworks interface 서버의 eureka server.
+        Genieworks interface 서버의 Gateway Server.
     </description>
 
     <dependencyManagement>
@@ -29,24 +28,20 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-            <version>2.1.0.RELEASE</version>
-        </dependency>
-    </dependencies>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>net.genieworks.ginterface.eureka.EurekaServerApplication</start-class>
+        <start-class>net.genieworks.ginterface.zuul.ZuulServerApplication</start-class>
         <java.version>1.8</java.version>
-        <docker.image.name>wody/genieworks-eureka-server</docker.image.name>
+        <docker.image.name>wody/genieworks-zuul-server</docker.image.name>
         <docker.image.tag>dev</docker.image.tag>
     </properties>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
             <!-- We use the Resources plugin to filer Dockerfile and run.sh, it inserts actual JAR filename -->
             <!-- The final Dockerfile will be created in target/dockerfile/Dockerfile -->
             <plugin>
@@ -87,11 +82,6 @@
                     </resources>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
         </plugins>
     </build>
-
 </project>

@@ -36,16 +36,6 @@ public class Test {
         long count = this.productRepository.count();
         log.debug("count is {}", count);
 
-        try {
-            Product p = this.productRepository.getOne(22323L);
-            log.debug(p.toString());
-        } catch (EntityNotFoundException e) {
-            e.printStackTrace();;
-        }
-
-
-
-
     }
 
 }
