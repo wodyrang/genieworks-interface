@@ -1,7 +1,7 @@
 package net.genieworks.ginterface.batch;
 
+import net.genieworks.ginterface.batch.schedule.BatchScheduler;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Genie Works [Batch Server] <br />
@@ -11,7 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <pre>
  * </pre>
  */
-@SpringBootApplication
 public class BatchServerApplication {
 
     /**
@@ -19,6 +18,6 @@ public class BatchServerApplication {
      * @param args
      */
     public static void main(String[] args) {
-        SpringApplication.run(BatchServerApplication.class);
+        SpringApplication.run(BatchScheduler.class);
     }
 }
