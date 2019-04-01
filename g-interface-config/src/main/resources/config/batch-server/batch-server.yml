@@ -1,0 +1,49 @@
+server:
+  port: 28090
+
+# Spring Setting
+spring:
+  profiles:
+    active: default
+  output:
+    ansi:
+      enabled: ALWAYS
+  datasource:
+    url: jdbc:mysql://mysql-local.ginterface.net:3306/ginterface?useUnicode=yes&characterEncoding=UTF-8≈ #jdbc:mysql://mysql-local.ginterface.net:3306/ginterface?useUnicode=yes&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver #net.sf.log4jdbc.sql.jdbcapi.DriverSpy #
+    username: geniework-interface-local
+    password: genieinterface!2019
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        format_sql: true
+        enable_lazy_load_no_trans: true
+    open-in-view: false
+    generate-ddl: false
+  main:
+    allow-bean-definition-overriding: true
+
+# Slack Alarm Setting
+slack:
+  enabled: true
+  webhook:
+    url: "https://hooks.slack.com/services/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"
+
+# Setting logging levels
+logging:
+  level:
+    com.netflix: DEBUG
+    org.springframework.web: DEBUG
+    net.genieworks.ginterface.product: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    jdbc.sqlonly: WARN
+    jdbc.sqltiming: DEBUG
+    jdbc.resultsettable: DEBUG

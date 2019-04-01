@@ -1,18 +1,10 @@
 server:
-  port: 8888
+  port: 8080
 
 spring:
-  profiles:
-    active: native
   output:
     ansi:
       enabled: ALWAYS
-  cloud:
-    config:
-      server:
-        bootstrap: true
-        native:
-          search-locations: classpath:config/,classpath:config/eureka-server, classpath:config/product-server, classpath:config/zuul-server, classpath:config/batch-server
 
 eureka:
   instance:
@@ -28,4 +20,4 @@ logging:
   level:
     com.netflix: DEBUG
     org.springframework.web: DEBUG
-    net.genieworks.ginterface.config: DEBUG
+    net.genieworks.ginterface.batch: DEBUG

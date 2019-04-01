@@ -1,12 +1,12 @@
 server:
   port: 13550
 
-zuul:
-  ignored-services: '*'
-  prefix: /api
-  routes:
-    productservice: /product/**
-    orderservice: /order/**
+#zuul:
+#  ignored-services: '*'
+#  prefix: /api
+#  routes:
+#    product-server: /product/**
+#    order-server: /order/**
 
 # Setting logging levels
 logging:

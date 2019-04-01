@@ -3,6 +3,7 @@ spring:
     name: zuul-server
   profiles:
     active: default
-  cloud:
-    config:
-      uri: http://config-local.ginterface.net:8888
+#  cloud:
+#    config:
+#      uri: http://config-local.ginterface.net:8888
+#
