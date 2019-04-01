@@ -8,7 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>g-interface.batch</artifactId>
+    <artifactId>g-interface-batch</artifactId>
     <modelVersion>4.0.0</modelVersion>
 
     <name>Genieworks Interface Batch Server.</name>
