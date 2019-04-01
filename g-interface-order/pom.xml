@@ -2,19 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <parent>
         <artifactId>genieworks-interface</artifactId>
         <groupId>net.genieworks.ginterface</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>g-interface.product</artifactId>
+    <artifactId>g-interface-order</artifactId>
     <modelVersion>4.0.0</modelVersion>
 
-    <name>Genieworks Interface Product Server.</name>
+    <name>Genieworks Interface Order Server.</name>
     <description>
-        Genieworks interface 서버의 상품 연동 관련 서버
+        Genieworks interface 서버의 주문 연동 관련 서버
     </description>
 
     <dependencyManagement>
@@ -74,31 +73,13 @@
             <artifactId>common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>com.querydsl</groupId>
-            <artifactId>querydsl-apt</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.querydsl</groupId>
-            <artifactId>querydsl-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.querydsl</groupId>
-            <artifactId>querydsl-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.bgee.log4jdbc-log4j2</groupId>
-            <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
-            <version>1.16</version>
-        </dependency>
     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>net.genieworks.ginterface.product.ProductServerApplication</start-class>
+        <start-class>net.genieworks.ginterface.order.OrderServerApplication</start-class>
         <java.version>1.8</java.version>
-        <docker.image.name>wody/genieworks-product-server</docker.image.name>
+        <docker.image.name>wody/genieworks-order-server</docker.image.name>
         <docker.image.tag>dev</docker.image.tag>
     </properties>
 

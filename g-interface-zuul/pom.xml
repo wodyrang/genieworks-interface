@@ -2,19 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <parent>
         <artifactId>genieworks-interface</artifactId>
         <groupId>net.genieworks.ginterface</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
+    <artifactId>g-interface-zuul</artifactId>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>g-interface.config</artifactId>
-
-    <name>Genieworks Interface Configuration Server.</name>
+    <name>Genieworks Interface Zuul Server.</name>
     <description>
-        Genieworks interface 서버의 설정 관련 정보를 관리하는 config server.
+        Genieworks interface 서버의 Gateway Server.
     </description>
 
     <dependencyManagement>
@@ -29,33 +28,20 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-            <version>2.1.0.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>2.1.0.RELEASE</version>
-        </dependency>
-    </dependencies>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>net.genieworks.ginterface.config.ConfigServerApplication</start-class>
+        <start-class>net.genieworks.ginterface.zuul.ZuulServerApplication</start-class>
         <java.version>1.8</java.version>
-        <docker.image.name>wody/genieworks-config-server</docker.image.name>
+        <docker.image.name>wody/genieworks-zuul-server</docker.image.name>
         <docker.image.tag>dev</docker.image.tag>
     </properties>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
             <!-- We use the Resources plugin to filer Dockerfile and run.sh, it inserts actual JAR filename -->
             <!-- The final Dockerfile will be created in target/dockerfile/Dockerfile -->
             <plugin>
@@ -95,10 +81,6 @@
                         </resource>
                     </resources>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
