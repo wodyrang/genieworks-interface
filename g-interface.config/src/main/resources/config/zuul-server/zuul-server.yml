@@ -1,0 +1,16 @@
+server:
+  port: 13550
+
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    productservice: /product/**
+    orderservice: /order/**
+
+# Setting logging levels
+logging:
+  level:
+    com.netflix: DEBUG
+    org.springframework.web: DEBUG
+    net.genieworks.ginterface.zuul: DEBUG
