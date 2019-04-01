@@ -16,15 +16,15 @@
     </parent>
 
     <modules>
-        <module>g-interface.eureka</module>
-        <module>g-interface.config</module>
-        <module>g-interface.product</module>
-        <module>g-interface.order</module>
-        <module>g-interface.authentication</module>
-        <module>g-interface.zuul</module>
-        <module>g-interface.admin</module>
-        <module>g-interface.batch</module>
-        <module>g-interface.common</module>
+        <module>g-interface-eureka</module>
+        <module>g-interface-config</module>
+        <module>g-interface-product</module>
+        <module>g-interface-order</module>
+        <module>g-interface-authentication</module>
+        <module>g-interface-zuul</module>
+        <module>g-interface-admin</module>
+        <module>g-interface-batch</module>
+        <module>g-interface-common</module>
     </modules>
 
     <dependencies>
