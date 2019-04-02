@@ -1,108 +1,43 @@
 package net.genieworks.ginterface.product.model.domain;
 
-
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 /**
  * 상품 Entity
  */
-@Getter
-@Entity
+@Entity @Getter
 public class Product {
 
-    @Id
+    @Id @Column(name = "product_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "product_id")
+    @Setter
     private Long id;
-
-    @Column
+    @Column @Setter
     private Long customerId;
-
-    @Column
+    @Column @Setter
     private String productName;
-
-    @Column
+    @Column @Setter
     private String productSupplierName;
-
-    @Column
+    @Column @Setter
     private String productEnglishName;
-
-    @Column
+    @Column @Setter
     private String productDescriptionSimple;
-
-    @Column
+    @Column @Setter
     private String productDescriptionDetail;
-
-    @Column
+    @Column @Setter
     private Integer supplierPrice;
-
-    @Column
+    @Column @Setter
     private Integer customerPrice;
-
-    @Column
+    @Column @Setter
     private Integer salePrice;
-
-    @Column
+    @Column @Setter
     private String displayType;
-
-    @Column
+    @Column @Setter
     private String saleType;
-
-    @Column
+    @Column @Setter
     private Long categoryNo;
 
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setCustomerId(Long customerId) {
-        this.customerId = customerId;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public void setProductSupplierName(String productSupplierName) {
-        this.productSupplierName = productSupplierName;
-    }
-
-    public void setProductEnglishName(String productEnglishName) {
-        this.productEnglishName = productEnglishName;
-    }
-
-    public void setProductDescriptionSimple(String productDescriptionSimple) {
-        this.productDescriptionSimple = productDescriptionSimple;
-    }
-
-    public void setProductDescriptionDetail(String productDescriptionDetail) {
-        this.productDescriptionDetail = productDescriptionDetail;
-    }
-
-    public void setSupplierPrice(Integer supplierPrice) {
-        this.supplierPrice = supplierPrice;
-    }
-
-    public void setCustomerPrice(Integer customerPrice) {
-        this.customerPrice = customerPrice;
-    }
-
-    public void setSalePrice(Integer salePrice) {
-        this.salePrice = salePrice;
-    }
-
-    public void setDisplayType(String displayType) {
-        this.displayType = displayType;
-    }
-
-    public void setSaleType(String saleType) {
-        this.saleType = saleType;
-    }
-
-    public void setCategoryNo(Long categoryNo) {
-        this.categoryNo = categoryNo;
-    }
 }

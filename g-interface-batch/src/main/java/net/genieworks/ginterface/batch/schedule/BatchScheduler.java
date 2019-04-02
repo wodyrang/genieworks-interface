@@ -23,7 +23,11 @@ public class BatchScheduler {
     private final JobLauncher launcher;
     private final Job productCollectionJob;
 
-    @Scheduled
+    /**
+     * 외부상품 수집 배치.
+     * @throws Exception exception.
+     */
+    @Scheduled(fixedDelay = 1000000)
     public void collectProduct() throws Exception {
         this.launcher.run(this.productCollectionJob, new JobParameters());
     }
