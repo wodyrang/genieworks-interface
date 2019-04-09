@@ -1,5 +1,5 @@
 server:
-  port: 28080
+  port: 28090
 
 # Spring Setting
 spring:
@@ -10,7 +10,7 @@ spring:
       enabled: ALWAYS
   datasource:
     url: jdbc:mysql://mysql-local.ginterface.net:3306/ginterface?useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&useSSL=false #jdbc:mysql://mysql-local.ginterface.net:3306/ginterface?useUnicode=yes&characterEncoding=UTF-8
-    driver-class-name: com.mysql.cj.jdbc.Driver #com.mysql.cj.jdbc.Driver #net.sf.log4jdbc.sql.jdbcapi.DriverSpy #
+    driver-class-name: com.mysql.cj.jdbc.Driver #net.sf.log4jdbc.sql.jdbcapi.DriverSpy #
     username: geniework-interface-local
     password: genieinterface!2019
   jpa:

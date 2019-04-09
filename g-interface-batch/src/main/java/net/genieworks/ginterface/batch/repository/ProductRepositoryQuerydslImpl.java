@@ -1,11 +1,10 @@
-package net.genieworks.ginterface.product.repository;
+package net.genieworks.ginterface.batch.repository;
 
-import net.genieworks.ginterface.product.model.domain.Product;
-import net.genieworks.ginterface.product.model.domain.QProduct;
+import net.genieworks.ginterface.batch.model.domain.Product;
+import net.genieworks.ginterface.batch.model.domain.QProduct;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
 import java.util.List;
-
 
 public class ProductRepositoryQuerydslImpl extends QuerydslRepositorySupport implements ProductRepositoryQuerydsl {
 
@@ -20,3 +19,10 @@ public class ProductRepositoryQuerydslImpl extends QuerydslRepositorySupport imp
                 .fetch();
     }
 }
+
+
+
+
+
+
+

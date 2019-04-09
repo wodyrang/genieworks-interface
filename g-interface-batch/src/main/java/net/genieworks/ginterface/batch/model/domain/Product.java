@@ -1,4 +1,4 @@
-package net.genieworks.ginterface.product.model.domain;
+package net.genieworks.ginterface.batch.model.domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,7 +14,7 @@ public class Product {
     @Id @Column(name = "product_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter
-    private Long id;
+    private Long productId;
     @Column @Setter
     private Long customerId;
     @Column @Setter
@@ -39,5 +39,4 @@ public class Product {
     private String saleType;
     @Column @Setter
     private Long categoryNo;
-
 }

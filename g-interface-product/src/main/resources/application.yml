@@ -20,4 +20,4 @@ logging:
   level:
     com.netflix: DEBUG
     org.springframework.web: DEBUG
-    net.genieworks.ginterface.config: DEBUG
+    net.genieworks.ginterface.product: DEBUG
