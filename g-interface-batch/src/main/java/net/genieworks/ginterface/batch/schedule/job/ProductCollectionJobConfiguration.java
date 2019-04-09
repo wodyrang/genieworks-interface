@@ -49,7 +49,7 @@ public class ProductCollectionJobConfiguration {
         return this.stepBuilderFactory.get("product-collection-step")
                 .chunk(1)
                 .reader(this.cafe24ProductCollector)
-                .writer(this.productWriter)
+                //.writer(this.productWriter) // 오류???
                 .build();
     }
 
